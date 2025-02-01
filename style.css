@@ -39,18 +39,39 @@ audio:hover {
 }
 
 .lyric-line {
-    position: absolute; /* Todas las líneas se superponen */
-    left: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-    margin: 0 auto; /* Centra horizontalmente */
-    top: 0; /* Fija la posición vertical */
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(20px); /* Inicia ligeramente abajo */
+  transition: 
+      opacity 0.5s ease-in-out,
+      transform 0.5s ease-in-out;
+  pointer-events: none;
+  margin: 0 auto;
+  top: 0;
 }
 
 .lyric-line.active {
-    opacity: 1;
+  opacity: 1;
+  transform: translateY(0); /* Posición final */
+  text-shadow: 
+    0 0 10px rgba(255, 100, 100, 0.8),  /* Brillo rojo claro */
+    0 0 20px rgba(255, 150, 150, 0.6),  /* Brillo más amplio */
+    0 0 30px rgba(255, 200, 200, 0.4);  /* Brillo difuminado */
+  transition: 
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out,
+    text-shadow 0.5s ease-in-out;  /* Transición suave para el glow */
+}
+
+.lyric-line.exit {
+  opacity: 0;
+  transform: translateY(-20px); /* Sale hacia arriba */
+  text-shadow: 
+    0 0 10px rgba(255, 100, 100, 0.4),  /* Brillo rojo claro más tenue */
+    0 0 20px rgba(255, 150, 150, 0.2),
+    0 0 30px rgba(255, 200, 200, 0.1);
 }
 @keyframes fadeInUp {
     from {
