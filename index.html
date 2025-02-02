@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body class="not-loaded">
+      
         <div class="night"></div>
+
+        <div class="loader">
+          <div class="spinner"></div>
+          <p>Cargando...</p>
+        </div>
 
         <!-- Contenedor de la letra de la canción -->
         <div id="lyrics-container">
@@ -48,7 +54,7 @@
         </div>
         
         <div class="flowers">
-            <audio id="song" controls autoplay loop>
+            <audio id="song" controls loop preload="auto">
                 <source src="song/sin-maquillar.mp3" type="audio/mpeg">
                 Tu navegador no soporta le etiqueta de audio!
             </audio>
