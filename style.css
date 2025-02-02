@@ -39,6 +39,7 @@ audio:hover {
 }
 
 .lyric-line {
+  font-family: "Delius Swash Caps", serif;
   position: absolute;
   left: 0;
   right: 0;
