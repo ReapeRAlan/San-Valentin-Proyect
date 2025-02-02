@@ -41,63 +41,57 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Verifica que el audio y el loader existan
-    if (!audio || !loader) {
-        console.error("Elementos no encontrados");
-        return;
-    }
+    if (!audio || !loader) return;
 
-    // Maneja la carga exitosa del audio
-    const handleCanPlay = () => {
+    const hideLoader = () => {
         loader.style.display = 'none';
         document.body.classList.remove("not-loaded");
-        // Remueve el listener después de usarlo
-        audio.removeEventListener('canplaythrough', handleCanPlay);
     };
 
-    // Maneja errores de carga
-    const handleError = () => {
-        loader.style.display = 'none';
-        console.error("Error al cargar el audio");
-    };
-
-    // Agrega los listeners
-    audio.addEventListener('canplaythrough', handleCanPlay);
-    audio.addEventListener('error', handleError);
-
-    // Inicia la reproducción con interacción del usuario
-    document.body.addEventListener('click', () => {
-        document.body.addEventListener('click', () => {
-          if (audio.paused) {
-              // Si el audio está pausado, inicia la reproducción
-              audio.play().catch(error => {
-                  console.log("Esperando interacción del usuario...");
-              });
-          } else {
-              // Si el audio está reproduciéndose, pausa
-              audio.pause();
-          }
-      }); 
+    audio.addEventListener('loadeddata', hideLoader); // Cuando los datos iniciales están cargados
+    audio.addEventListener('canplay', hideLoader); // Cuando puede reproducirse
+    audio.addEventListener('canplaythrough', hideLoader); // Cuando puede reproducirse sin interrupciones
+    
+    // 2. Timeout de respaldo por si falla la carga
+    const backupTimeout = setTimeout(hideLoader, 5000); // 5 segundos máximo
+    
+    // 3. Manejar errores
+    audio.addEventListener('error', () => {
+        clearTimeout(backupTimeout);
+        hideLoader();
     });
+
+    let isPlaying = false;
+    const handlePlayPause = () => {
+        if (!isPlaying) {
+            audio.play().catch(err => console.log("Esperando interacción..."));
+            isPlaying = true;
+        } else {
+            audio.pause();
+            isPlaying = false;
+        }
+    };
+    
+    // Agregar ambos tipos de eventos para móvil/desktop
+    document.body.addEventListener('click', handlePlayPause);
+    document.body.addEventListener('touchstart', handlePlayPause);
+
     audio.addEventListener('timeupdate', () => {
-      const currentTime = audio.currentTime;
-  
-      lyrics.forEach((lyric, index) => {
-          if (currentTime >= lyricTimes[index] && currentTime < lyricTimes[index + 1]) {
-              // Añade la clase 'active' a la línea actual
-              lyric.classList.add('active');
-  
-              // Remueve la clase 'active' y añade 'exit' a la línea anterior
-              if (index > 0) {
-                  lyrics[index - 1].classList.remove('active');
-                  lyrics[index - 1].classList.add('exit');
-              }
-          } else {
-              // Remueve las clases si no es el momento de la línea
-              lyric.classList.remove('active');
-              lyric.classList.remove('exit');
-          }
-      });
-  });
+        const currentTime = audio.currentTime;
+        lyrics.forEach((lyric, index) => {
+            if (currentTime >= lyricTimes[index] && currentTime < lyricTimes[index + 1]) {
+                lyric.classList.add('active');
+    
+                if (index > 0) {
+                    lyrics[index - 1].classList.remove('active');
+                    lyrics[index - 1].classList.add('exit');
+                }
+            } else {
+                lyric.classList.remove('active');
+                lyric.classList.remove('exit');
+            }
+        });
+    });
 });
 
   
