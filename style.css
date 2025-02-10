@@ -28,7 +28,7 @@ audio:hover {
 
 #lyrics-container {
     position: fixed;
-    top: 15vh; /* 3/4 desde la parte superior (viewport height) */
+    top: 50vh; /* 3/4 desde la parte superior (viewport height) */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
