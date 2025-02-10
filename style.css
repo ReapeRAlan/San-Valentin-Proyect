@@ -150,85 +150,519 @@ body {
   z-index: 10;
   --fl-speed: 0.8s;
 }
+/* Flor rosa */
 .flower--1 {
-  animation: moving-flower-1 4s linear infinite;
-}
-.flower--1 .flower__line {
-  height: 70vmin;
-  animation-delay: 0.3s;
-}
-.flower--1 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 1.6s backwards;
-}
-.flower--1 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 1.4s backwards;
-}
-.flower--1 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 1.2s backwards;
-}
-.flower--1 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 1s backwards;
-}
-.flower--1 .flower__line__leaf--5 {
-  animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
-}
-.flower--1 .flower__line__leaf--6 {
-  animation: blooming-leaf-left var(--fl-speed) 2s backwards;
-}
-.flower--2 {
-  left: 50%;
-  transform: rotate(30deg);
+  left: 500%;
+  transform: rotate(-100deg);
   animation: moving-flower-2 4s linear infinite;
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 10vmin;
+  transform-origin: bottom center;
+  z-index: 10;
+  --fl-speed: 0.8s;
 }
-.flower--2 .flower__line {
-  height: 60vmin;
-  animation-delay: 0.8s;
+
+.flower--1 .flower__leaf {
+  background-color: #2f00ff; /* Rosa */
+  background-image: linear-gradient(to top, #4400ff, #ff0000);
 }
-.flower--2 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 1.9s backwards;
+
+.flower--1 .flower__line {
+  height: 98vmin;
+  animation-delay: 1.2s;
 }
-.flower--2 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 1.7s backwards;
+
+@keyframes moving-flower-2 {
+  0%, 100% {
+      transform: rotate(-30deg);
+  }
+  50% {
+      transform: rotate(-25deg);
+  }
 }
-.flower--2 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 1.5s backwards;
+/* Flor rosa */
+.flower--2 {
+  left: -50%;
+  transform: rotate(100deg);
+  animation: moving-flower-2 4s linear infinite;
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 10vmin;
+  transform-origin: bottom center;
+  z-index: 10;
+  --fl-speed: 0.8s;
 }
-.flower--2 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 1.3s backwards;
+
+.flower--2 .flower__leaf {
+  background-color: #ffffff; /* Rosa */
+  background-image: linear-gradient(to top, #3d09cc, #ffffff);
 }
+
+.flower--2 .flower__line { 
+  height:80vmin;
+  animation-delay: 1.2s;
+}
+
+@keyframes moving-flower-2 {
+  0%, 100% {
+      transform: rotate(-30deg);
+  }
+  50% {
+      transform: rotate(-25deg);
+  }
+}
+/* Flor rosa */
 .flower--3 {
-  left: 50%;
+  left: 25%;
   transform: rotate(-15deg);
   animation: moving-flower-3 4s linear infinite;
 }
+
+.flower--3 .flower__leaf {
+  background-color: #9e84dd; /* Rosa */
+  background-image: linear-gradient(to top, #1814ff, #8a1212);
+}
+
 .flower--3 .flower__line {
-  animation-delay: 0.9s;
+  height: 95vmin;
+  animation-delay: 1.2s;
 }
-.flower--3 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 2.5s backwards;
+
+@keyframes moving-flower-3 {
+  0%, 100% {
+      transform: rotate(15deg);
+  }
+  50% {
+      transform: rotate(20deg);
+  }
 }
-.flower--3 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 2.3s backwards;
+
+
+/* Flor rosa */
+.flower--4 {
+  left: 20%;
+  transform: rotate(-10deg);
+  animation: moving-flower-4 4s linear infinite;
 }
-.flower--3 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 2.1s backwards;
+
+.flower--4 .flower__leaf {
+  background-color: #ff69b4; /* Rosa */
+  background-image: linear-gradient(to top, #1418ff, #69d0ff);
 }
-.flower--3 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 1.9s backwards;
+
+.flower--4 .flower__line {
+  height: 99vmin;
+  animation-delay: 1.2s;
 }
+
+@keyframes moving-flower-4 {
+  0%, 100% {
+      transform: rotate(10deg);
+  }
+  50% {
+      transform: rotate(5deg);
+  }
+}
+
+/* Flor amarilla */
+.flower--5 {
+  left: 80%;
+  transform: rotate(10deg);
+  animation: moving-flower-5 4s linear infinite;
+}
+
+.flower--5 .flower__leaf {
+  background-color: #ffeb3b; /* Amarillo */
+  background-image: linear-gradient(to top, #ffda07, #ff3bbe);
+}
+
+.flower--5 .flower__line {
+  height: 75vmin;
+  animation-delay: 1.5s;
+}
+
+@keyframes moving-flower-5 {
+  0%, 100% {
+      transform: rotate(35deg);
+  }
+  50% {
+      transform: rotate(40deg);
+  }
+}
+
+
+
+/* Flor rosa */
+.flower--6 {
+  left: 25%;
+  transform: rotate(-25deg);
+  animation: moving-flower-6 4s linear infinite;
+}
+
+.flower--6 .flower__leaf {
+  background-color: #69f5ff; /* Rosa */
+  background-image: linear-gradient(to top, #14c8ff, #910f0f);
+}
+
+.flower--6 .flower__line {
+  height: 75vmin;
+  animation-delay: 1.2s;
+}
+
+@keyframes moving-flower-6 {
+  0%, 100% {
+      transform: rotate(-30deg);
+  }
+  50% {
+      transform: rotate(-25deg);
+  }
+}
+
+
+/* Flor rosa */
+.flower--7 {
+  left: 35%;
+  transform: rotate(-20deg);
+  animation: moving-flower-7 4s linear infinite;
+}
+
+.flower--7 .flower__leaf {
+  background-color: #000000; /* Rosa */
+  background-image: linear-gradient(to top, #1942ca, #b9c512c2);
+}
+
+.flower--7 .flower__line {
+  height: 100vmin;
+  animation-delay: 1.5s;
+}
+
+@keyframes moving-flower-7 {
+  0%, 100% {
+      transform: rotate(5deg);
+  }
+  50% {
+      transform: rotate(-5deg);
+  }
+}
+
+/* Flor 8 - Azul */
+.flower--8 {
+  left: 10%;
+  transform: rotate(5deg);
+  animation: moving-flower-8 3.8s linear infinite;
+}
+
+.flower--8 .flower__leaf {
+  background-color: #eaf63b; /* Azul */
+  background-image: linear-gradient(to top, #1e3a8a, #dadd14);
+}
+
+.flower--8 .flower__line {
+  height: 88vmin;
+  animation-delay: 1.3s;
+}
+
+@keyframes moving-flower-8 {
+  0%, 100% {
+      transform: rotate(6deg);
+  }
+  50% {
+      transform: rotate(-6deg);
+  }
+}
+
+/* Flor 9 - Amarilla */
+.flower--9 {
+  left: 70%;
+  transform: rotate(-10deg);
+  animation: moving-flower-9 4.2s linear infinite;
+}
+
+.flower--9 .flower__leaf {
+  background-color: #facc15; /* Amarillo */
+  background-image: linear-gradient(to top, #d97706, #fde047);
+}
+
+.flower--9 .flower__line {
+  height: 92vmin;
+  animation-delay: 1.6s;
+}
+
+@keyframes moving-flower-9 {
+  0%, 100% {
+      transform: rotate(2deg);
+  }
+  50% {
+      transform: rotate(-7deg);
+  }
+}
+
+/* Flor 10 - Lila */
+.flower--10 {
+  left: 35%;
+  transform: rotate(12deg);
+  animation: moving-flower-10 4.5s linear infinite;
+}
+
+.flower--10 .flower__leaf {
+  background-color: #c084fc; /* Lila */
+  background-image: linear-gradient(to top, #7c3aed, #e9d5ff);
+}
+
+.flower--10 .flower__line {
+  height: 87vmin;
+  animation-delay: 1.4s;
+}
+
+@keyframes moving-flower-10 {
+  0%, 100% {
+      transform: rotate(20deg);
+  }
+  50% {
+      transform: rotate(25deg);
+  }
+}
+
+/* Flor 11 - Verde */
+.flower--11 {
+  left: 55%;
+  transform: rotate(-5deg);
+  animation: moving-flower-11 3.9s linear infinite;
+}
+
+.flower--11 .flower__leaf {
+  background-color: #10b981; /* Verde */
+  background-image: linear-gradient(to top, #065f46, #a7f3d0);
+}
+
+.flower--11 .flower__line {
+  height: 80vmin;
+  animation-delay: 1.5s;
+}
+
+@keyframes moving-flower-11 {
+  0%, 100% {
+      transform: rotate(-10deg);
+  }
+  50% {
+      transform: rotate(-15deg);
+  }
+}
+
+/* Flor 12 - Roja */
+.flower--12 {
+  left: 15%;
+  transform: rotate(7deg);
+  animation: moving-flower-12 4.1s linear infinite;
+}
+
+.flower--12 .flower__leaf {
+  background-color: #ef4444; /* Rojo */
+  background-image: linear-gradient(to top, #991b1b, #fecaca);
+}
+
+.flower--12 .flower__line {
+  height: 82vmin;
+  animation-delay: 1.2s;
+}
+
+@keyframes moving-flower-12 {
+  0%, 100% {
+      transform: rotate(35deg);
+  }
+  50% {
+      transform: rotate(30deg);
+  }
+}
+
+/* Flor 13 - Celeste */
+.flower--13 {
+  left: 40%;
+  transform: rotate(-12deg);
+  animation: moving-flower-13 3.7s linear infinite;
+}
+
+.flower--13 .flower__leaf {
+  background-color: #38bdf8; /* Celeste */
+  background-image: linear-gradient(to top, #0ea5e9, #e0f2fe);
+}
+
+.flower--13 .flower__line {
+  height: 91vmin;
+  animation-delay: 1.7s;
+}
+
+@keyframes moving-flower-13 {
+  0%, 100% {
+      transform: rotate(-20deg);
+  }
+  50% {
+      transform: rotate(-10deg);
+  }
+}
+
+/* Flor 14 - Naranja */
+.flower--14 {
+  left: 60%;
+  transform: rotate(15deg);
+  animation: moving-flower-14 4s linear infinite;
+}
+
+.flower--14 .flower__leaf {
+  background-color: #f97316; /* Naranja */
+  background-image: linear-gradient(to top, #c2410c, #ffedd5);
+}
+
+.flower--14 .flower__line {
+  height: 84vmin;
+  animation-delay: 1.3s;
+}
+
+@keyframes moving-flower-14 {
+  0%, 100% {
+      transform: rotate(18deg);
+  }
+  50% {
+      transform: rotate(25deg);
+  }
+}
+
+/* Flor 15 - Morada */
+.flower--15 {
+  left: 85%;
+  transform: rotate(-18deg);
+  animation: moving-flower-15 4.3s linear infinite;
+}
+
+.flower--15 .flower__leaf {
+  background-color: #7e22ce; /* Morado */
+  background-image: linear-gradient(to top, #581c87, #eeff00);
+}
+
+.flower--15 .flower__line {
+  height: 85vmin;
+  animation-delay: 1.8s;
+}
+
+@keyframes moving-flower-15 {
+  0%, 100% {
+      transform: rotate(-35deg);
+  }
+  50% {
+      transform: rotate(-20deg);
+  }
+}
+
+/* Flor 16 - Verde Lima */
+.flower--16 {
+  left: 5%;
+  transform: rotate(10deg);
+  animation: moving-flower-16 4.2s linear infinite;
+}
+
+.flower--16 .flower__leaf {
+  background-color: #84cc16; /* Verde Lima */
+  background-image: linear-gradient(to top, #4d7c0f, #f0fdf4);
+}
+
+.flower--16 .flower__line {
+  height: 90vmin;
+  animation-delay: 1.6s;
+}
+
+@keyframes moving-flower-16 {
+  0%, 100% {
+      transform: rotate(15deg);
+  }
+  50% {
+      transform: rotate(22deg);
+  }
+}
+
+/* Flor 17 - Rosada */
+.flower--17 {
+  left: 50%;
+  transform: rotate(-14deg);
+  animation: moving-flower-17 3.8s linear infinite;
+}
+
+.flower--17 .flower__leaf {
+  background-color: #f472b6; /* Rosado */
+  background-image: linear-gradient(to top, #dad75d, #e60785);
+}
+
+.flower--17 .flower__line {
+  height: 87vmin;
+  animation-delay: 1.4s;
+}
+
+@keyframes moving-flower-17 {
+  0%, 100% {
+      transform: rotate(-10deg);
+  }
+  50% {
+      transform: rotate(-18deg);
+  }
+}
+
+
 .flower__leafs {
   position: relative;
   animation: blooming-flower 2s backwards;
 }
 .flower__leafs--1 {
-  animation-delay: 1.1s;
+  animation-delay: 2.3s;
 }
 .flower__leafs--2 {
-  animation-delay: 1.4s;
+  animation-delay: 1.8s;
 }
 .flower__leafs--3 {
+  animation-delay: 2.9s;
+}
+.flower__leafs--4 {
+  animation-delay: 1.8s;
+}
+.flower__leafs--5 {
+  animation-delay: 1.8s;
+}
+.flower__leafs--6 {
   animation-delay: 1.7s;
 }
+.flower__leafs--7 {
+  animation-delay: 1.9s;
+}
+.flower__leafs--8 {
+  animation-delay: 1.3s;
+}
+.flower__leafs--9 {
+  animation-delay: 1.6s;
+}
+.flower__leafs--10 {
+  animation-delay: 2.7s;
+}
+.flower__leafs--11 {
+  animation-delay: 2.3s;
+}
+.flower__leafs--12 {
+  animation-delay: 1.2s;
+}
+.flower__leafs--13 {
+  animation-delay: 1.3s;
+}
+.flower__leafs--14 {
+  animation-delay: 2.4s;
+}
+.flower__leafs--15 {
+  animation-delay: 1.5s;
+}
+.flower__leafs--16 {
+  animation-delay: 2.8s;
+}
+.flower__leafs--17 {
+  animation-delay: 2.6s;
+}
+
 .flower__leafs::after {
   content: "";
   position: absolute;
@@ -957,6 +1391,62 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   transform: rotate(-10deg) rotateY(-180deg);
   animation: leaf-ans-3 3s linear infinite;
 }
+
+#valentine-container {
+  text-align: center;
+  position: absolute;
+  top: 10px; /* Siempre en la parte superior */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 99999; /* Máxima prioridad sin conflictos */
+  pointer-events: none; /* Evita bloqueos de otros elementos */
+}
+
+.valentine-text {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px pink;
+}
+
+.valentine-buttons {
+  margin-top: 10px;
+  pointer-events: auto; /* Permite que los botones sean clickeables */
+}
+
+#yes-btn, #no-btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yes-btn {
+  background-color: #ff69b4;
+  color: white;
+}
+
+#no-btn {
+  background-color: #ff4500;
+  color: white;
+}
+
+#no-btn:hover {
+  background-color: #ff0000;
+}
+
+.yes-grow {
+  font-size: 2rem;
+  padding: 15px 30px;
+}
+
+.hidden {
+  display: none;
+}
+
 
 @keyframes leaf-ans-1 {
   0%, 100% {

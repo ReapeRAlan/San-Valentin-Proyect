@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TE AMO MILI</title>
+    <title>TE AMO SARAHI</title>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,50 +19,109 @@
           <div class="spinner"></div>
           <p style="color: white;">Cargando...</p>
           <p style="color: white;">Por favor espera mi amor :3</p>
+          
         </div>
+        <div id="valentine-container">
+            <p class="valentine-text">¿Quieres ser mi San Valentín? 💖</p>
+            <div class="valentine-buttons">
+                <button id="yes-btn">Sí</button>
+                <button id="no-btn">No</button>
+            </div>
+        </div>
+
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const yesBtn = document.getElementById("yes-btn");
+            const noBtn = document.getElementById("no-btn");
+        
+            noBtn.addEventListener("click", function () {
+              yesBtn.classList.add("yes-grow"); 
+              noBtn.classList.add("hidden"); 
+            });
+        
+            yesBtn.addEventListener("click", function () {
+              document.getElementById("valentine-container").innerHTML = "<p class='valentine-text'>💖 ¡Sabía que dirías que sí! 💖</p>";
+            });
+          });
+        </script>
+        
+      
 
         <!-- Contenedor de la letra de la canción -->
         <div id="lyrics-container">
-          <p class="lyric-line">Quiero</p>
-          <p class="lyric-line">Parar un momento</p>
-          <p class="lyric-line">Soñar que estoy dentro</p>
-          <p class="lyric-line">De tus ojos</p>
-          <p class="lyric-line">Quiero</p>
-          <p class="lyric-line">Soñar que te beso</p>
-          <p class="lyric-line">Después darme cuenta</p>
-          <p class="lyric-line">Que sigo despierto</p>
-          <p class="lyric-line">Y no me la creo</p>
-          <p class="lyric-line">Que tú estás aquí</p>
-          <p class="lyric-line">Simulando que no dices nada</p>
-          <p class="lyric-line">Y yo siento así</p>
-          <p class="lyric-line">Diez mil palabras</p>
-          <p class="lyric-line">Yo no te pido que seas normal, yo solo quiero que seas real</p>
-          <p class="lyric-line">Que seas intensa cuando amanezca</p>
-          <p class="lyric-line">Que estés tan loca como tú quieras</p>
-          <p class="lyric-line">Como tú sientas, como tú estés</p>
-          <p class="lyric-line">Como tú sepas que solo eres tú</p>
-          <p class="lyric-line">Que digas todo sin preguntar, y que me beses sin avisar</p>
-          <p class="lyric-line">Que tengas miedo cuando te asustes</p>
-          <p class="lyric-line">Que sueltes lágrimas si te lucen</p>
-          <p class="lyric-line">Que rompas todo si es necesario</p>
-          <p class="lyric-line">Los dos estamos para arreglarlo</p>
-          <p class="lyric-line">Que a mí me gustas tal como eres</p>
-          <p class="lyric-line">A mí me gustas tal como estás</p>
-          <p class="lyric-line">Es la verdad</p>
-          <p class="lyric-line">Así</p>
-          <p class="lyric-line">Sin maquillar</p>
-          <p class="lyric-line">Es la verdad</p>
-          <p class="lyric-line">Así</p>
-          <p class="lyric-line">Sin maquillar &#128147;</p>
-          <p class="lyric-line">Feliz San Valentin Mi Niña :3</p>
-            <!-- Agrega más líneas según sea necesario -->
+          
+          <p class="lyric-line">¿Alguna vez te sonrojaste?</p>
+          <p class="lyric-line">¿Alguna vez tuviste ese miedo de no poder cambiar?</p>
+          <p class="lyric-line">El tipo que se te pega como algo en tus dientes?</p>
+          <p class="lyric-line">¿Hay algunos ases bajo tu manga?</p>
+          <p class="lyric-line">¿No sabes que eres mi obsesión?</p>
+          <p class="lyric-line">He soñado contigo casi todas las noches de esta semana.</p>
+          <p class="lyric-line">¿Cuántos secretos puedes guardar?</p>
+          <p class="lyric-line">Porque hay una canción que encontré</p>
+          <p class="lyric-line">Que me hace pensar en ti de alguna forma,</p>
+          <p class="lyric-line">Y la pongo en repetición</p>
+          <p class="lyric-line">Hasta que me quedo dormido,</p>
+          <p class="lyric-line">Derramando bebidas en mi sofá.</p>
+          <p class="lyric-line">(¿Será que quiero saber?)</p>
+          <p class="lyric-line">Si este sentimiento es correspondido.</p>
+          <p class="lyric-line">(Triste por verte ir)</p>
+          <p class="lyric-line">Esperaba que te quedaras.</p>
+          <p class="lyric-line">(Amor, los dos sabemos)</p>
+          <p class="lyric-line">Que las noches fueron hechas principalmente</p>
+          <p class="lyric-line">Para decir cosas que no podemos decir mañana por el día.</p>
+          <p class="lyric-line">Arrastrándome de vuelta a ti.</p>
+          <p class="lyric-line">¿Alguna vez pensaste en llamar cuando tenías tiempo?</p>
+          <p class="lyric-line">Porque yo siempre lo hago.</p>
+          <p class="lyric-line">Quizás estoy demasiado ocupado siendo tuyo</p>
+          <p class="lyric-line">Como para enamorarme de alguien más.</p>
+          
+          <p class="lyric-line">Arrastrándome de vuelta a ti.</p>
+          <p class="lyric-line">Así que, ¿tuviste el valor?</p>
+          <p class="lyric-line">Me pregunto si tu corazón sigue abierto,</p>
+          <p class="lyric-line">Y si es así, quiero saber a qué hora cierra.</p>
+          <p class="lyric-line">Cálmate y deja de fruncir el ceño.</p>
+          <p class="lyric-line">Lo siento por interrumpir,</p>
+          <p class="lyric-line">Es solo que siempre estoy al borde</p>
+          <p class="lyric-line">De intentar besarte.</p>
+          <p class="lyric-line">No sé si sientes lo mismo que yo,</p>
+          <p class="lyric-line">Pero podríamos estar juntos...</p>
+          <p class="lyric-line">..si quisieras.</p>
+          <p class="lyric-line">(¿Será que quiero saber?)</p>
+          <p class="lyric-line">Si este sentimiento es correspondido.</p>
+          <p class="lyric-line">(Triste por verte ir)</p>
+          <p class="lyric-line">Esperaba que te quedaras.</p>
+          <p class="lyric-line">(Amor, los dos sabemos)</p>
+          <p class="lyric-line">Que las noches fueron hechas principalmente</p>
+          <p class="lyric-line">Para decir cosas que no podemos decir mañana por el día.</p>
+          <p class="lyric-line">Arrastrándome de vuelta a ti</p>
+          <p class="lyric-line">(arrastrándome de vuelta a ti)</p>
+          <p class="lyric-line">¿Alguna vez pensaste en llamar cuando tenías tiempo?</p>
+          <p class="lyric-line">tenías tiempo?</p>
+          <p class="lyric-line">Porque yo siempre lo hago</p>
+          <p class="lyric-line">(porque yo siempre lo hago)</p>
+          <p class="lyric-line">Quizás estoy muy</p>
+          <p class="lyric-line">(quizás estoy muy ocupado)</p>
+          <p class="lyric-line">Ocupado siendo tuyo</p>
+          <p class="lyric-line">(siendo tuyo)</p>
+          <p class="lyric-line">Como para enamorarme de alguien más</p>
+          <p class="lyric-line">Ahora que lo he pensado bien</p>
+          <p class="lyric-line">Arrastrándome de vuelta a ti....</p>
+          <p class="lyric-line">Te amo💖 y gracias por ser mi san valentin :3 </p>
+          
         </div>
+        
         
         <div class="flowers">
             <audio id="song" controls loop preload="auto">
-                <source src="song/sin-maquillar.mp3" type="audio/mpeg">
+                <source src="song\DoIWannaKnow.mp3" type="audio/mpeg">
                 Tu navegador no soporta le etiqueta de audio!
             </audio>
+
+          
+
+
+          
 
           <div class="flower flower--1">
             <div class="flower__leafs flower__leafs--1">
@@ -93,9 +152,256 @@
               <div class="flower__line__leaf flower__line__leaf--6"></div>
             </div>
           </div>
+          <!-- Flor rosa -->
+          <div class="flower flower--4">
+            <div class="flower__leafs flower__leafs--4">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor amarilla -->
+          <div class="flower flower--5">
+            <div class="flower__leafs flower__leafs--5">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+          <!-- Flor azul -->
+          <div class="flower flower--8">
+            <div class="flower__leafs flower__leafs--8">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor amarilla -->
+          <div class="flower flower--9">
+            <div class="flower__leafs flower__leafs--9">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor lila -->
+          <div class="flower flower--10">
+            <div class="flower__leafs flower__leafs--10">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor verde -->
+          <div class="flower flower--11">
+            <div class="flower__leafs flower__leafs--11">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor roja -->
+          <div class="flower flower--12">
+            <div class="flower__leafs flower__leafs--12">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor celeste -->
+          <div class="flower flower--13">
+            <div class="flower__leafs flower__leafs--13">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+          <!-- Flor celeste -->
+          <div class="flower flower--14">
+            <div class="flower__leafs flower__leafs--14">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+          <!-- Flor celeste -->
+          <div class="flower flower--15">
+            <div class="flower__leafs flower__leafs--15">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+          <!-- Flor celeste -->
+          <div class="flower flower--16">
+            <div class="flower__leafs flower__leafs--16">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+          <!-- Flor celeste -->
+          <div class="flower flower--17">
+            <div class="flower__leafs flower__leafs--17">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
       
           <div class="flower flower--2">
-            <div class="flower__leafs flower__leafs--2">
+            <div class="flower__leafs flower__leafs--1">
               <div class="flower__leaf flower__leaf--1"></div>
               <div class="flower__leaf flower__leaf--2"></div>
               <div class="flower__leaf flower__leaf--3"></div>
@@ -143,6 +449,48 @@
               <div class="flower__line__leaf flower__line__leaf--2"></div>
               <div class="flower__line__leaf flower__line__leaf--3"></div>
               <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor rosa -->
+          <div class="flower flower--6">
+            <div class="flower__leafs flower__leafs--4">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+            </div>
+          </div>
+
+          <!-- Flor amarilla -->
+          <div class="flower flower--7">
+            <div class="flower__leafs flower__leafs--5">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+            </div>
+            <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
             </div>
           </div>
       
@@ -361,8 +709,10 @@
             </div>
           </div>
         </div>
+        
     
         <script src="index.js"></script>
       </body>
+      
 
 </html>
