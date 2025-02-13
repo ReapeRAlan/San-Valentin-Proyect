@@ -28,7 +28,7 @@ audio:hover {
 
 #lyrics-container {
     position: fixed;
-    top: 15vh; /* 3/4 desde la parte superior (viewport height) */
+    top: 50vh; /* 3/4 desde la parte superior (viewport height) */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -1581,3 +1581,147 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .not-loaded * {
   animation-play-state: start !important;
 }
+
+
+.spotify-player {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.texto-romantico {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 30px 0;
+  color: #ff69b4;
+}
+
+.boton {
+  position: fixed;
+  top: 10%; /* Posición vertical más arriba */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 25px 30px;
+  font-size: 1.2em;
+  background-color: #ff1493;
+  color: white;
+  border-radius: 70px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
+  /* Nuevas propiedades para alineación horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+  writing-mode: horizontal-tb; /* Fuerza orientación horizontal */
+  text-orientation: upright; /* Mantiene el texto derecho */
+  /* Borde para mejor contraste */
+  border: 2px solid #ffffff;
+  /* Mejor tipografía */
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+.boton:hover {
+  transform: translate(-50%, -50%) scale(1.1) rotate(0deg); /* Fuerza rotación 0 */
+  box-shadow: 0 6px 20px rgba(255, 20, 147, 0.6);
+  /* Efecto de elevación */
+  filter: brightness(1.1);
+}
+
+
+
+.music-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.music-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.music-header h1 {
+  font-family: 'Delius Swash Caps', cursive;
+  font-size: 2.5rem;
+  color: #ff69b4;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.song-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border-left: 4px solid #ff1493;
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+}
+
+.song-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  filter: drop-shadow(0 2px 2px rgba(255,20,147,0.3));
+}
+
+.song-card h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.song-meaning {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-left: 2px solid #ffb6c1;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+.love-message {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(255, 182, 193, 0.1);
+  border-radius: 20px;
+}
+
+.animated-heart {
+  font-size: 2.5rem;
+  animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Mantener estilos del botón anterior */
+.boton {
+  /* ... (mantener tus estilos actuales) ... */
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+

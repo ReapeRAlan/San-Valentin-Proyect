@@ -1,0 +1,209 @@
+/* Tema oscuro mejorado */
+html, body {
+    height: 100%;
+    overflow-y: auto;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+}
+
+.music-container {
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,105,180,0.1);
+}
+
+/* Grid de canciones mejorado */
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Tarjetas con espaciado mejorado */
+.song-card {
+    background: rgba(45,45,45,0.95);
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-left: 5px solid;
+    border-image: linear-gradient(to bottom, #ff69b4, #ff1493) 1 100%;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255,20,147,0.2);
+    background: rgba(54,54,54,0.98);
+}
+
+/* Efecto de luz deslizante */
+.song-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,105,180,0.1),
+        transparent
+    );
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.song-card:hover::before {
+    left: 100%;
+}
+
+/* Encabezado de tarjeta */
+.song-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    filter: drop-shadow(0 2px 2px rgba(255,20,147,0.3));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.song-card:hover .heart-icon {
+    transform: rotate(15deg) scale(1.1);
+    filter: drop-shadow(0 3px 5px rgba(255,20,147,0.4));
+}
+
+/* Título con subrayado animado */
+.song-card h2 {
+    color: #ff99c8;
+    font-size: 1.3rem;
+    margin: 0 0 0.8rem 0;
+    position: relative;
+}
+
+.song-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #ff1493;
+    transition: width 0.4s ease;
+}
+
+.song-card:hover h2::after {
+    width: 100px;
+}
+
+/* Texto de significado */
+.song-meaning {
+    color: #c0c0c0;
+    font-size: 1rem;
+    line-height: 1.7;
+    border-left: 3px solid;
+    border-image: linear-gradient(to bottom, #ff1493, #ff69b4) 1 100%;
+    padding-left: 1.5rem;
+    margin-left: 0.8rem;
+}
+
+/* Botón mejorado */
+.boton {
+    position: relative;
+    margin: 50px auto;
+    padding: 16px 35px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #ff1493, #ff0066);
+    color: white;
+    border: 2px solid #ff69b4;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 25px rgba(255, 20, 147, 0.4);
+    font-family: 'Delius Swash Caps', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.boton:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 8px 30px rgba(255, 20, 147, 0.6);
+    background: linear-gradient(45deg, #ff0066, #ff1493);
+}
+
+/* Reproductor estilizado */
+.spotify-player {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    animation: borderGlow 2s infinite alternate;
+}
+
+@keyframes borderGlow {
+    from { box-shadow: 0 0 10px rgba(255,20,147,0.3); }
+    to { box-shadow: 0 0 20px rgba(255,20,147,0.6); }
+}
+
+/* Animaciones */
+@keyframes heartbeat {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(3deg); }
+    50% { transform: scale(1.15) rotate(-3deg); }
+    75% { transform: scale(1.1) rotate(2deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.animated-heart {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(255, 20, 147, 0.4));
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .music-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .song-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .song-card {
+        padding: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .boton {
+        padding: 12px 25px;
+        font-size: 1em;
+        margin: 40px auto;
+    }
+}
+
+/* Transiciones suaves globales */
+* {
+    transition: all 0.3s ease;
+}

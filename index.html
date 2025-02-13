@@ -21,102 +21,27 @@
           <p style="color: white;">Por favor espera mi amor :3</p>
           
         </div>
-        <div id="valentine-container">
-            <p class="valentine-text">¿Quieres ser mi San Valentín? 💖</p>
-            <div class="valentine-buttons">
-                <button id="yes-btn">Sí</button>
-                <button id="no-btn">No</button>
-            </div>
-        </div>
+        <a href="/webSanValentin/musica.html" class="boton">Nuestra Música Especial</a>
+        
 
         
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-            const yesBtn = document.getElementById("yes-btn");
-            const noBtn = document.getElementById("no-btn");
-        
-            noBtn.addEventListener("click", function () {
-              yesBtn.classList.add("yes-grow"); 
-              noBtn.classList.add("hidden"); 
-            });
-        
-            yesBtn.addEventListener("click", function () {
-              document.getElementById("valentine-container").innerHTML = "<p class='valentine-text'>💖 ¡Sabía que dirías que sí! 💖</p>";
-            });
+              const loader = document.querySelector('.loader');
+              // Ocultar loader inmediatamente
+              if(loader) loader.style.display = 'none';
+              document.body.classList.remove('not-loaded');
           });
         </script>
         
+        
+        
       
 
-        <!-- Contenedor de la letra de la canción -->
-        <div id="lyrics-container">
-          
-          <p class="lyric-line">¿Alguna vez te sonrojaste?</p>
-          <p class="lyric-line">¿Alguna vez tuviste ese miedo de no poder cambiar?</p>
-          <p class="lyric-line">El tipo que se te pega como algo en tus dientes?</p>
-          <p class="lyric-line">¿Hay algunos ases bajo tu manga?</p>
-          <p class="lyric-line">¿No sabes que eres mi obsesión?</p>
-          <p class="lyric-line">He soñado contigo casi todas las noches de esta semana.</p>
-          <p class="lyric-line">¿Cuántos secretos puedes guardar?</p>
-          <p class="lyric-line">Porque hay una canción que encontré</p>
-          <p class="lyric-line">Que me hace pensar en ti de alguna forma,</p>
-          <p class="lyric-line">Y la pongo en repetición</p>
-          <p class="lyric-line">Hasta que me quedo dormido,</p>
-          <p class="lyric-line">Derramando bebidas en mi sofá.</p>
-          <p class="lyric-line">(¿Será que quiero saber?)</p>
-          <p class="lyric-line">Si este sentimiento es correspondido.</p>
-          <p class="lyric-line">(Triste por verte ir)</p>
-          <p class="lyric-line">Esperaba que te quedaras.</p>
-          <p class="lyric-line">(Amor, los dos sabemos)</p>
-          <p class="lyric-line">Que las noches fueron hechas principalmente</p>
-          <p class="lyric-line">Para decir cosas que no podemos decir mañana por el día.</p>
-          <p class="lyric-line">Arrastrándome de vuelta a ti.</p>
-          <p class="lyric-line">¿Alguna vez pensaste en llamar cuando tenías tiempo?</p>
-          <p class="lyric-line">Porque yo siempre lo hago.</p>
-          <p class="lyric-line">Quizás estoy demasiado ocupado siendo tuyo</p>
-          <p class="lyric-line">Como para enamorarme de alguien más.</p>
-          
-          <p class="lyric-line">Arrastrándome de vuelta a ti.</p>
-          <p class="lyric-line">Así que, ¿tuviste el valor?</p>
-          <p class="lyric-line">Me pregunto si tu corazón sigue abierto,</p>
-          <p class="lyric-line">Y si es así, quiero saber a qué hora cierra.</p>
-          <p class="lyric-line">Cálmate y deja de fruncir el ceño.</p>
-          <p class="lyric-line">Lo siento por interrumpir,</p>
-          <p class="lyric-line">Es solo que siempre estoy al borde</p>
-          <p class="lyric-line">De intentar besarte.</p>
-          <p class="lyric-line">No sé si sientes lo mismo que yo,</p>
-          <p class="lyric-line">Pero podríamos estar juntos...</p>
-          <p class="lyric-line">..si quisieras.</p>
-          <p class="lyric-line">(¿Será que quiero saber?)</p>
-          <p class="lyric-line">Si este sentimiento es correspondido.</p>
-          <p class="lyric-line">(Triste por verte ir)</p>
-          <p class="lyric-line">Esperaba que te quedaras.</p>
-          <p class="lyric-line">(Amor, los dos sabemos)</p>
-          <p class="lyric-line">Que las noches fueron hechas principalmente</p>
-          <p class="lyric-line">Para decir cosas que no podemos decir mañana por el día.</p>
-          <p class="lyric-line">Arrastrándome de vuelta a ti</p>
-          <p class="lyric-line">(arrastrándome de vuelta a ti)</p>
-          <p class="lyric-line">¿Alguna vez pensaste en llamar cuando tenías tiempo?</p>
-          <p class="lyric-line">tenías tiempo?</p>
-          <p class="lyric-line">Porque yo siempre lo hago</p>
-          <p class="lyric-line">(porque yo siempre lo hago)</p>
-          <p class="lyric-line">Quizás estoy muy</p>
-          <p class="lyric-line">(quizás estoy muy ocupado)</p>
-          <p class="lyric-line">Ocupado siendo tuyo</p>
-          <p class="lyric-line">(siendo tuyo)</p>
-          <p class="lyric-line">Como para enamorarme de alguien más</p>
-          <p class="lyric-line">Ahora que lo he pensado bien</p>
-          <p class="lyric-line">Arrastrándome de vuelta a ti....</p>
-          <p class="lyric-line">Te amo💖 y gracias por ser mi san valentin :3 </p>
-          
-        </div>
         
         
         <div class="flowers">
-            <audio id="song" controls loop preload="auto">
-                <source src="song\DoIWannaKnow.mp3" type="audio/mpeg">
-                Tu navegador no soporta le etiqueta de audio!
-            </audio>
+          
 
           
 
